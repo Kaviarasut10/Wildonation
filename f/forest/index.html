@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest Donation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Donate for Forest Reforestation</h1>
+        <p>Select a donation plan to plant more trees:</p>
+
+        <div class="donation-plans">
+            <button class="donate-button" onclick="selectDonation(10, 1)">₹10 - 1 Plant</button>
+            <button class="donate-button" onclick="selectDonation(100, 10)">₹100 - 10 Plants</button>
+            <button class="donate-button" onclick="selectDonation(500, 50)">₹500 - 50 Plants</button>
+            <button class="donate-button" onclick="selectDonation(1000, 100)">₹1000 - 100 Plants</button>
+        </div>
+
+        <div class="selected-plan"><a href="./QR/index.html">
+            <h2 id="selected-amount">Selected Donation: ₹0</h2>
+            <button id="donate-now" onclick="generateQRCode()">Donate Now</button>
+        </div>
+
+        <div class="qr-code-container">
+            <h3>Scan QR Code to Donate:</h3>
+            <div id="qrcode"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

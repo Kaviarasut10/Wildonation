@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>charity Donation Page</title>
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Donate to Children</h1>
+        <p>Your contribution makes a difference!</p>
+    </header>
+
+    <main>
+        <form id="submit-to-google-sheet">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <!-- Updated Donation Amount Field -->
+            <label for="amount">Donation Amount (₹):</label>
+            <select id="amount" name="amount" required>
+                <option value="" disabled selected>Select a Donation Plan</option>
+                <option value="100">Rs 100 - 1 child today</option>
+                <option value="500">Rs 500 - 5 children today</option>
+                <option value="1000">Rs 1000 - 10 children today</option>
+                <option value="2000">Rs 2000 - 20 children today</option>
+                <option value="5000">Rs 5000 - Sponsor a things</option>
+                <option value="10000">Rs 10000 - child study</option>
+                <option value="20000">Rs 20000 - Support a children</option>
+                <option value="50000">Rs 50000 - Fund a shelter</option>
+                <option value="100000">Rs 100000 - Help build a Home</option>
+                <option value="200000">Rs 2000000 - Lifetime care for an children</option>
+            </select>
+
+            <button type="submit">Submit Donation</button>
+            <button type="button" onclick="showQRCode()">Donate via QR Code</button>
+        </form>
+
+        <div id="qrCodeSection" style="display:none;">
+            <h2>Scan to Pay</h2>
+            <img id="qrCodeImage" alt="QR Code for Payment">
+        </div>
+    </main>
+
+    <footer>
+        <p>Thank you for your support! ❤️</p>
+    </footer>
+</body>
+</html>

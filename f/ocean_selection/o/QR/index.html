@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Cleanup Donation Page</title>
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Donate to Clean Up Waste</h1>
+        <p>Your contribution helps us remove waste: ₹100 for every 1kg!</p>
+    </header>
+
+    <main>
+        <form id="submit-to-google-sheet">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="amount">Donation Amount (₹) - ₹100 = 1kg of waste:</label>
+            <input type="number" id="amount" name="amount" min="100" step="100" placeholder="Enter multiples of 100" required>
+
+            <button type="submit">Submit Donation</button>
+            <button type="button" onclick="showQRCode()">Donate via QR Code</button>
+        </form>
+
+        <div id="qrCodeSection" style="display:none;">
+            <h2>Scan to Pay</h2>
+            <img id="qrCodeImage" alt="QR Code for Payment">
+        </div>
+    </main>
+
+    <footer>
+        <p>Thank you for your support in keeping the planet clean! 🌍</p>
+    </footer>
+</body>
+</html>
